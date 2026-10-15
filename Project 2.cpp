@@ -6,7 +6,7 @@ char userInput;
 
 int Divide()
 {
-    while (userInput != 'N')
+    while (userInput != 'N' && userInput != 'n')
     {
         std::cout << "Enter a number: ";
         std::cin >> firstInteger;
@@ -25,7 +25,14 @@ int Divide()
 
         std::cout << "Would you like to repeat this program? Please enter Y or N: ";
         std::cin >> userInput;
+
+        while (userInput != 'Y')
+        {
+            std::cout << "Incorrect input, would you like to repeat this program? Please enter Y or N: ";
+            std::cin >> userInput;
+        }
     }
+    std::cout << "Goodbye";
 
     return 0;
 }
