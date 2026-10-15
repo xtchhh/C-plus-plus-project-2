@@ -25,12 +25,6 @@ int Divide()
 
         std::cout << "Would you like to repeat this program? Please enter Y or N: ";
         std::cin >> userInput;
-
-        while (userInput != 'Y')
-        {
-            std::cout << "Incorrect input, would you like to repeat this program? Please enter Y or N: ";
-            std::cin >> userInput;
-        }
     }
     std::cout << "Goodbye";
 
