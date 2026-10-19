@@ -8,11 +8,15 @@ int Divide()
 {
     do
     {
-        std::cout << "Enter a number: ";
-        std::cin >> firstInteger;
+        std::cout << "Enter two numbers: \n";
 
-        std::cout << "Enter another number: ";
-        std::cin >> secondInteger;
+        while (!(std::cin >> firstInteger) || !(std::cin >> secondInteger))
+        {
+            std::cout << "You can only enter a number, enter two numbers: \n";
+
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
 
         if (firstInteger % secondInteger == 0)
         {
