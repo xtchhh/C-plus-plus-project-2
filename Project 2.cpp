@@ -6,7 +6,7 @@ char userInput;
 
 int Divide()
 {
-    while (userInput != 'N' && userInput != 'n')
+    do
     {
         std::cout << "Enter a number: ";
         std::cin >> firstInteger;
@@ -25,7 +25,9 @@ int Divide()
 
         std::cout << "Would you like to repeat this program? Please enter Y or N: ";
         std::cin >> userInput;
-    }
+    } 
+    while (userInput != 'N' && userInput != 'n'); //block of code not needed do is that block of code to be executed, just goes back to it
+
     std::cout << "Goodbye";
 
     return 0;
